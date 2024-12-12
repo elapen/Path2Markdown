@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+
+# PyInstaller
+build/
+dist/
+
+# IDEs
+.idea/
+*.iml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Virtual Environments
+.venv/
+env/

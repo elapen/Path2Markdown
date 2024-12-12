@@ -1,0 +1,60 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Update version
+        run: |
+          pip install -r requirements.txt
+          python src/path2markdown/update_version.py ${{ github.ref_name }}
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build exe with PyInstaller
+        run: |
+          pyinstaller --noconsole --onefile --icon=resources/icon.ico --name=Path2Markdown src/path2markdown/main.py
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes
+
+      - name: Build installer
+        # Предполагается, что setup.iss находится в папке installer/
+        # и Path2Markdown.exe в dist/
+        run: "& 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' installer\setup.iss"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: installer
+          path: installer\Output\Path2Markdown_Setup.exe
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: installer
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: installer/Output/Path2Markdown_Setup.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
