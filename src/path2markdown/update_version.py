@@ -16,4 +16,3 @@ if __name__ == "__main__":
         print("Usage: python update_version.py <new_version>")
         sys.exit(1)
     update_version(sys.argv[1])
-
