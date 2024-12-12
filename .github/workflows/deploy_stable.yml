@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*'  # Срабатывает при пуше тега, начинающегося с "v"
 
 jobs:
   build:
@@ -34,14 +34,13 @@ jobs:
 
       - name: Build installer
         # Предполагается, что setup.iss находится в папке installer/
-        # и Path2Markdown.exe в dist/
-        run: "& 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' installer\setup.iss"
+        run: "& 'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe' installer\\setup.iss"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: installer
-          path: installer\Output\Path2Markdown_Setup.exe
+          path: installer/Output/Path2Markdown_Setup.exe
 
   release:
     needs: build
@@ -57,4 +56,4 @@ jobs:
         with:
           files: installer/Output/Path2Markdown_Setup.exe
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
