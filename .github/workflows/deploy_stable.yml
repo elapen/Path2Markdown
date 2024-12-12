@@ -56,13 +56,9 @@ jobs:
           echo "Current directory: $(pwd)"
           ls -R
 
-      - name: Unzip artifact
-        run: |
-          unzip Path2Markdown/installer.zip -d extracted
-
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: extracted/Path2Markdown_Setup.exe
+          files: Path2Markdown_Setup.exe  # Указываем файл, найденный в текущей директории
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
