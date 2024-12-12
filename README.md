@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Say গন/Path2Markdown">
+  <a href="https://github.com/elapen/Path2Markdown">
     <img loading="lazy" alt="Path2Markdown Main UI" src="docs/screenshots/main.png" width="100%"/>
   </a>
 </p>
@@ -7,9 +7,9 @@
 # Path2Markdown
 
 <p align="center">
-  <a href="https://github.com/Say গন/Path2Markdown/releases" target="_blank"><img src="https://img.shields.io/github/v/release/Say গন/Path2Markdown?label=Latest%20Release" alt="Latest Release"/></a>
-  <a href="https://github.com/Say গন/Path2Markdown/issues" target="_blank"><img src="https://img.shields.io/github/issues/Say গন/Path2Markdown.svg" alt="Issues"/></a>
-  <a href="https://github.com/Say গন/Path2Markdown/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/Say গন/Path2Markdown.svg" alt="License"/></a>
+  <a href="https://github.com/elapen/Path2Markdown/releases" target="_blank"><img src="https://img.shields.io/github/v/release/elapen/Path2Markdown?label=Latest%20Release" alt="Latest Release"/></a>
+  <a href="https://github.com/elapen/Path2Markdown/issues" target="_blank"><img src="https://img.shields.io/github/issues/elapen/Path2Markdown.svg" alt="Issues"/></a>
+  <a href="https://github.com/elapen/Path2Markdown/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/elapen/Path2Markdown.svg" alt="License"/></a>
 </p>
 
 **Languages:** [English](#english) | [Русский](#русский) | [Қазақша](#қазақша)
@@ -72,7 +72,7 @@ Modern AI assistants and developers often require a quick and structured overvie
 ### Installation & Usage
 
 1. **Download & Run the Installer:**
-    Obtain the .exe installer from the [releases](https://github.com/Say গন/Path2Markdown/releases). Install Path2Markdown, and it will automatically configure itself to run at system startup.
+    Obtain the .exe installer from the [releases](https://github.com/elapen/Path2Markdown/releases). Install Path2Markdown, and it will automatically configure itself to run at system startup.
 
 2. **Select a Folder:**
     Launch Path2Markdown and select a folder to instantly generate its Markdown representation. A copy button is provided for quickly copying the results into your documentation.
@@ -152,7 +152,7 @@ _Пример сгенерированного Markdown-документа._
 ### Установка и использование
 
 1. **Скачайте и запустите установщик:**
-    Получите .exe-установщик со страницы [релизов](https://github.com/Say গন/Path2Markdown/releases). Установите Path2Markdown, и он автоматически настроит себя на запуск при запуске системы.
+    Получите .exe-установщик со страницы [релизов](https://github.com/elapen/Path2Markdown/releases). Установите Path2Markdown, и он автоматически настроит себя на запуск при запуске системы.
 
 2. **Выберите папку:**
     Запустите Path2Markdown и выберите папку, чтобы мгновенно сгенерировать ее представление в Markdown. Предусмотрена кнопка копирования для быстрого копирования результатов в вашу документацию.
@@ -232,7 +232,7 @@ _Жасалған Markdown шығысының мысалы._
 ### Орнату және пайдалану
 
 1. **Орнатушыны жүктеп алып, іске қосыңыз:**
-    exe орнатушысын [шығарылымдар](https://github.com/Say গন/Path2Markdown/releases) бетінен алыңыз. Path2Markdown орнатыңыз, ол автоматты түрде жүйе іске қосылған кезде жұмыс істеуге өзін конфигурациялайды.
+    exe орнатушысын [шығарылымдар](https://github.com/elapen/Path2Markdown/releases) бетінен алыңыз. Path2Markdown орнатыңыз, ол автоматты түрде жүйе іске қосылған кезде жұмыс істеуге өзін конфигурациялайды.
 
 2. **Буманы таңдаңыз:**
     Path2Markdown іске қосыңыз және оның Markdown көрінісін бірден жасау үшін буманы таңдаңыз. Нәтижелерді құжаттамаңызға жылдам көшіру үшін көшіру түймесі берілген.
