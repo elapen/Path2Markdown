@@ -51,7 +51,7 @@ jobs:
         with:
           name: installer
 
-      - name: Debug: Check artifact location
+      - name: Check artifact location
         run: |
           echo "Current directory: $(pwd)"
           ls -R
