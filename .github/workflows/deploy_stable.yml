@@ -51,9 +51,14 @@ jobs:
         with:
           name: installer
 
+      - name: Debug: Check artifact location
+        run: |
+          echo "Current directory: $(pwd)"
+          ls -R
+
       - name: Unzip artifact
         run: |
-          unzip installer -d extracted
+          unzip Path2Markdown/installer.zip -d extracted
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
