@@ -37,7 +37,7 @@ jobs:
         run: "& 'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe' installer\\setup.iss"
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4  # Обновлено до v3
+        uses: actions/upload-artifact@v4
         with:
           name: installer
           path: installer/Output/Path2Markdown_Setup.exe
@@ -47,13 +47,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4  # Обновлено до v4
+        uses: actions/download-artifact@v4
         with:
           name: installer
+
+      - name: Unzip artifact
+        run: |
+          unzip installer -d extracted
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: installer/Output/Path2Markdown_Setup.exe
+          files: extracted/Path2Markdown_Setup.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
